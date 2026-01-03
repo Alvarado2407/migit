@@ -1,4 +1,7 @@
 import argparse
+import os
+
+from . import data
 
 def main():
     #1. Le asignamos el valor de la funcion parse_args a la variable args
@@ -22,4 +25,5 @@ def parse_args ():
     return parser.parse_args ()
 
 def init (args):
-    print ('Hola, esto es migit')
+    data.init ()
+    print (f'Se inicializo un repositorio migit vacio en {os.getcwd()}/{data.GIT_DIR}')
